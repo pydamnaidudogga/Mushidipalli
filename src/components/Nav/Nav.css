@@ -50,9 +50,7 @@
 }
 
 @media screen and (max-width:1000px){
-    section>h1{
-      font-size: 2rem;
-    }
+  
     
   }
   @media screen  and (max-width:600px){
@@ -70,13 +68,13 @@
     }
     #options-menu{
         flex-direction: column;
-        background-color: var(--secondry_color);
+        background-color: #fdd6af;
         height: 300px;
         width: 200px;
         gap: 30px;
         margin-top: 45px;
         display: none;
-        z-index: 0;
+        z-index: 1;
     }
     #menu-logo{
         display: inline-block;

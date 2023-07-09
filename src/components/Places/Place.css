@@ -1,14 +1,24 @@
 #Places{
     height:auto;
+    
+}
+#Places h2{
+  position: relative;
+  top: 100px;
+  font-size: 2.5rem !important ;
 }
 .places-container{
     display: flex;
     gap: 10px;
     justify-content: center;
+    align-items: center;
+    background-color: #c0a188;
+    height: 700px;
 }
 
 .cards {
     width: 300px;
+    height: 500px;
     background-color: #f1f1f1;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -17,7 +27,7 @@
 
   .card-image {
     width: 100%;
-    height: auto;
+    height: 300px;
   }
 
   .card-content {
@@ -45,6 +55,13 @@
 
 
   @media screen and (max-width:1000px){
+    .card-image {
+     
+      height: 200px;
+    }
+    .cards{
+      height: 400px;
+    }
 
 
   }
@@ -53,16 +70,24 @@
         overflow: hidden;
         justify-content: flex-start;
         overflow-x: scroll;
+        height: 600px;
+        align-items: center;
+    }
+    #Places h2{
+      
+      top: 50px;
+      font-size: 2rem !important ;
     }
     .cards{
         width: 100%;
         margin: 0 0 0 4%;
+        height: 480px;
         overflow: visible;
         gap: 0;
       }
     .card-image {
         width: 350px;
-        height: auto;
+        height: 350px;
       }
 
 
