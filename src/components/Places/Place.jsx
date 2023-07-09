@@ -6,6 +6,7 @@ function Places() {
            image:'https://m.media-amazon.com/images/I/61w3N+3KKUL.jpg',
            cardTitle:'Temples',
            description:'This is a description of the card.',
+           link:'/temples'
 
 
         },
@@ -13,6 +14,7 @@ function Places() {
             image:'https://w0.peakpx.com/wallpaper/827/359/HD-wallpaper-water-water-logo-plus-themes.jpg',
             cardTitle:'Ponds',
             description:'This is a description of the card.',
+            link:'/temples'
 
 
          },
@@ -20,6 +22,7 @@ function Places() {
             image:'https://img.freepik.com/premium-vector/education-school-logo-design_586739-1335.jpg?w=2000',
             cardTitle:'Schools',
             description:'This is a description of the card.',
+            link:'/temples'
 
 
          },
@@ -27,6 +30,7 @@ function Places() {
             image:'https://www.logopeople.in/wp-content/uploads/2013/01/government-of-india.jpg',
             cardTitle:'Govt.Offices',
             description:'This is a description of the card.',
+            link:'/temples'
 
 
          }
@@ -45,7 +49,7 @@ function Places() {
                         <div className="card-content">
                             <h3 className="card-title">{data.cardTitle}</h3>
                             <p className="card-description">{data.description}</p>
-                            <a href="dg" className="card-button">Click me</a>
+                            <a href={data.link} className="card-button">Click me</a>
                         </div>
                     </span>
                 ))

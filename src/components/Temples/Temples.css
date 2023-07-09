@@ -1,0 +1,70 @@
+.temple-out-container{
+    display: flex;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+.temple-container{
+    display: flex;
+    width: 80%;
+    background-color: #d0c4b0;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding: 5%;
+}
+.temple-container button{
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid;
+    outline: none;
+    border-radius: 40px ;
+    
+}
+.temple-image{
+    width: 40%;
+    height: 500px;
+}
+.temple-description{
+    width: 40%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (max-width:1000px){
+    
+    
+    
+  }
+
+
+@media screen  and (max-width:600px){
+    #Temples{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .temple-out-container{
+        height: auto;
+    }
+    .temple-container{
+
+        flex-direction: column;
+
+    }
+    .temple-description{
+        width: 100%;
+        height: 330px;
+    }
+    .temple-image{
+        width: 100%;
+        height: 400px;
+    }
+    
+    
+  }

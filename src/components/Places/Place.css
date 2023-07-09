@@ -5,21 +5,21 @@
 #Places h2{
   position: relative;
   top: 100px;
-  font-size: 2.5rem !important ;
+  
 }
 .places-container{
     display: flex;
     gap: 10px;
     justify-content: center;
     align-items: center;
-    background-color: #c0a188;
+    background-color: #b6863947;
     height: 700px;
 }
 
 .cards {
     width: 300px;
     height: 500px;
-    background-color: #f1f1f1;
+    background-color: #d5cfc4;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;

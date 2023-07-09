@@ -1,4 +1,5 @@
 import VillageMap from '../MyVillageMap/VillageMap';
+import Place from '../Places/Place';
 import './Home.css'
 function Home() {
     return (
@@ -28,6 +29,9 @@ function Home() {
             <VillageMap/>
 
           </div>
+          
+          <Place/>
+         
         </header>
       </div>
     );

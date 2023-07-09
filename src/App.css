@@ -80,8 +80,11 @@
   .App{
     font-size: 0.5rem;
   }
-  .h2{
+  h2{
     font-size: 1.5rem;
+  }
+  p{
+    font-size: 15px;
   }
   
 }

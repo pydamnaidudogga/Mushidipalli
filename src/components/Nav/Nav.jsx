@@ -30,7 +30,7 @@ function Nav() {
         
         <header className="Nav-header">
             <div id='villageName' >
-                <span> <a href='er' >MUSHIDIPALLI</a></span>
+                <span> <a href='/' >MUSHIDIPALLI</a></span>
             </div>
             <div id='menu-logo' onClick={()=>openMenu()} >
                 <HiMenu />
@@ -41,13 +41,13 @@ function Nav() {
                 <GrClose/>
             </span>
             <span>
-                <a href='sf' >Home</a>
+                <a href='/' >Home</a>
             </span>
             <span>
                  <a href='sf' >About</a>             
             </span>
             <span>
-                 <a href='sf' >Places</a>
+                 <a href='#Places' >Places</a>
             </span>
             <span>
                  <a href='sf' >SignIn</a>
