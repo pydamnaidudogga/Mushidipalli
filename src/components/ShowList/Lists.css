@@ -1,22 +1,24 @@
-.temple-out-container{
+.data-out-container{
     display: flex;
     height: 85vh;
     justify-content: center;
     align-items: center;
     
 }
-.temple-container{
+.data-container{
     display: flex;
     width: 80%;
+    height: 70%;
+    margin: 10px 0px;
     background-color: var(--third_color);
-    border-radius: 10px;
+    border-radius: 40px;
     justify-content: center;
     align-items: center;
     box-shadow: 3px 3px;
     gap: 10%;
     padding: 5%;
 }
-.temple-container button{
+.data-container button{
     padding: 10px;
     background-color: transparent;
     border: 1px solid;
@@ -24,17 +26,21 @@
     border-radius: 40px ;
     
 }
-.temple-image{
+.data-image{
     width: 40%;
-    height: 500px;
+    height: 100%;
+    border-radius: 40px;
 }
-.temple-description{
+.data-description{
     width: 40%;
     height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+.data-description p{
+    text-align: justify;
 }
 
 @media screen and (max-width:1000px){
@@ -50,19 +56,20 @@
         flex-direction: column;
         gap: 50px;
     }
-    .temple-out-container{
+    .data-out-container{
         height: auto;
     }
-    .temple-container{
+    .data-container{
 
         flex-direction: column;
+        padding: 2%;
 
     }
-    .temple-description{
+    .data-description{
         width: 100%;
         height: 330px;
     }
-    .temple-image{
+    .data-image{
         width: 100%;
         height: 400px;
     }

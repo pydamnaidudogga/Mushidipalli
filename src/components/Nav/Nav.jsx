@@ -44,17 +44,15 @@ function Nav() {
                 <a href='/' >Home</a>
             </span>
             <span>
+                 <a href='df' >People</a>
+            </span>
+            <span>
+                 <a href='sf' >Contact</a>
+            </span>
+            <span>
                  <a href='sf' >About</a>             
             </span>
-            <span>
-                 <a href='#Places' >Places</a>
-            </span>
-            <span>
-                 <a href='sf' >SignIn</a>
-            </span>
-            <span>
-                 <a href='sf' >SingUp</a>
-            </span>
+           
             
             
 

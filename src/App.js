@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Home from './components/Home/Home';
-import Temples from './components/Temples/Temples';
+import Lists from './components/ShowList/Lists';
+import InvalidRoute from './components/InvalidRoute';
 
 function App() {
   return (
@@ -23,8 +24,12 @@ function App() {
     <Router>
     <Routes>
       <Route exact path="/" element={<Home/>} />
-      <Route exact path="/temples" element={<Temples/>} />
-      {/* <Route path='*' element={<InvalidRoute/>}/> */}
+      <Route exact path="/temples" element={<Lists/>} />
+      <Route exact path="/ponds" element={<Lists/>} />
+      <Route exact path="/schools" element={<Lists/>} />
+      <Route exact path="/govtOffices" element={<Lists/>} />
+
+      <Route path='*' element={<InvalidRoute/>}/>
       
     </Routes>
   </Router>

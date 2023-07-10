@@ -11,10 +11,10 @@ function Places() {
 
         },
         {
-            image:'https://w0.peakpx.com/wallpaper/827/359/HD-wallpaper-water-water-logo-plus-themes.jpg',
+            image:'https://img.freepik.com/free-vector/vector-clean-shiny-blue-drop-with-circles-water-close-up-front-view_1284-48012.jpg?w=2000',
             cardTitle:'Ponds',
             description:'This is a description of the card.',
-            link:'/temples'
+            link:'/ponds'
 
 
          },
@@ -22,7 +22,7 @@ function Places() {
             image:'https://img.freepik.com/premium-vector/education-school-logo-design_586739-1335.jpg?w=2000',
             cardTitle:'Schools',
             description:'This is a description of the card.',
-            link:'/temples'
+            link:'/schools'
 
 
          },
@@ -30,7 +30,7 @@ function Places() {
             image:'https://www.logopeople.in/wp-content/uploads/2013/01/government-of-india.jpg',
             cardTitle:'Govt.Offices',
             description:'This is a description of the card.',
-            link:'/temples'
+            link:'/govtOffices'
 
 
          }
@@ -39,19 +39,23 @@ function Places() {
 
     return (
       <div id="Places">
-        <h2 >Places</h2>
+        
         <div className='places-container' >
             {
                 templs.map((data,index)=>(
+                    
+                        <span key={index} className="cards"  >
+                           <h3 className="card-title">{data.cardTitle}</h3>
+                           <a href={data.link} >
+                           <img src={data.image} alt="cardphoto" className="card-image"/>
 
-                    <span className="cards" key={index} >
-                        <img src={data.image} alt="cardphoto" className="card-image"/>
-                        <div className="card-content">
-                            <h3 className="card-title">{data.cardTitle}</h3>
-                            <p className="card-description">{data.description}</p>
-                            <a href={data.link} className="card-button">Click me</a>
-                        </div>
-                    </span>
+                           </a>
+                                   
+                        </span>
+
+                    
+
+                    
                 ))
             }
 

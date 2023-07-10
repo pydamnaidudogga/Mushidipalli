@@ -5,15 +5,19 @@
     margin: 0px;
    
 }
+.name-container{
+    position: relative;
+    top: -10%;
+}
 
 .text {
     position: absolute;
     top: 50%; 
-    right: 50%;
+    right: 33%;
     transform: translate(50%,-50%);
     text-transform: uppercase;
     font-family: verdana;
-    font-size: 4em;
+    font-size: 5.5em;
     font-weight: 700;
     color: var(--primary_color);
     text-shadow: 1px 1px 1px #ffffff,
@@ -30,6 +34,15 @@
     1px 22px 10px rgba(16,16,16,0.2),
     1px 25px 35px rgba(16,16,16,0.2),
     1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.welcome{
+    font-size: 2rem;
+    position: relative;
+    top: -90%;
+    animation: reverseTransformation 1s;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
 }
 
 
@@ -79,42 +92,35 @@
     justify-content: center;
     background-position: center;
 }
-.grassImage {
+
+.paradise-section p{
+
+    padding: 0% 3%;
+    text-align: justify;
+    margin: 0;
+
+}
+
+
+
+
+@keyframes reverseTransformation {
+    form{
+        top: -100px;
+        opacity: -2;
+
+    }
+    to {
+        top:0;
+        opacity: 1;
+
+
+    }
     
-    width:90%;
-    margin-top:-110px;
-
-}
-.grassImage-div {
-    height: 300px;
-}
-.discription-div p{
-    width: 80%;
-}
-.discription-div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    flex-direction: column;
-    padding: 30px 0 30px 0;
-
-  
-
-
-}
-.readMore{
-    padding: 10px 10px;
-    border: 1px solid;
-    border-radius: 40px;
 }
 
 @keyframes transformation {
-    /* 0%   {top:100px;}
-  25%  {top: 75px;}
-  50%  {top:50px;}
-  75%  {top:25px;}
-  100% {top:0px;} */
+    
   from {
     top:150px;
     opacity: -1;
@@ -128,23 +134,7 @@
 }
 
 @media screen and (max-width:1000px){
-    .grassImage-div {
-        height: 100px;
-    }
-    .discription-div{
-        padding-top: 0px;
-    }
-    .villageNameImage{
-        width: 530px;
-    }
-    .grassImage {
-        width: 600px;
-        margin-top:-60px;
-
-    }
-    .text-dec{
-        font-size: 50px;
-    }
+   
    
     
     
@@ -155,41 +145,14 @@
         font-size: 15px;
        
     }
-    .grassImage-div {
-        height: 60px;
-        
+    .paradise-section p{
+        padding: 3%;
     }
+    .text{
+        font-size: 2.5rem;
+    }
+  
     
-    .text-dec{
-        /* font-size: 20px; */
-        font-size: 37px;
-    color: #ffc107;
-    font-family: "Arial Black", Gadget, sans-serif;
-    text-shadow: none;
-    }
-    
-    .discription-div{
-        padding-top: 0;
-       
-       
-    }
-    .readMore{
-        padding: 10px 10px;
-        font-size: 15px;
-        border: 1px solid;
-        border-radius: 40px;
-    }
-    .discription-div p{
-        width: 95%;
-        font-size: 15px;
-    }
-    .villageNameImage{
-        width: 300px;
-    }
-    .grassImage {
-        width: 350px;
-        margin-top:-40px;
-    }
     
     
     
