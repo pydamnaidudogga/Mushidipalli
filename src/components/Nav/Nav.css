@@ -68,7 +68,7 @@
     }
     #options-menu{
         flex-direction: column;
-        background-color: #fdd6af;
+        background-color: var(--background_color);
         height: 300px;
         width: 200px;
         gap: 30px;
@@ -80,7 +80,7 @@
         display: inline-block;
         font-size: 30px;
     }
-    .menu-logo svg{
+    #menu-logo svg{
         padding: 10px 10px !important ;
     }
     .menu-close-logo{

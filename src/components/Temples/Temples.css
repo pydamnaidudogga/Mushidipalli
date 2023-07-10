@@ -8,10 +8,11 @@
 .temple-container{
     display: flex;
     width: 80%;
-    background-color: #d0c4b0;
+    background-color: var(--third_color);
     border-radius: 10px;
     justify-content: center;
     align-items: center;
+    box-shadow: 3px 3px;
     gap: 10%;
     padding: 5%;
 }

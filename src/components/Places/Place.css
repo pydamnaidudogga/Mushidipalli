@@ -12,16 +12,17 @@
     gap: 10px;
     justify-content: center;
     align-items: center;
-    background-color: #b6863947;
+    background-color: var(--secondry_color);
     height: 700px;
 }
 
 .cards {
     width: 300px;
     height: 500px;
-    background-color: #d5cfc4;
+    background-color: var(--third_color);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    box-shadow: 0 2px 4px var(--primary_color);
     overflow: hidden;
   }
 
@@ -47,7 +48,7 @@
   .card-button {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #2d0b05;
+    background-color: var(--primary_color);
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -70,24 +71,24 @@
         overflow: hidden;
         justify-content: flex-start;
         overflow-x: scroll;
-        height: 600px;
+        height: 700px;
         align-items: center;
     }
     #Places h2{
       
-      top: 50px;
-      font-size: 2rem !important ;
+      top: 40px;
+      
     }
     .cards{
         width: 100%;
-        margin: 0 0 0 4%;
-        height: 480px;
+        margin: 0 4% 0 4%;
+        height: 600px;
         overflow: visible;
         gap: 0;
       }
     .card-image {
-        width: 350px;
-        height: 350px;
+        width: 310px;
+        height: 400px;
       }
 
 
