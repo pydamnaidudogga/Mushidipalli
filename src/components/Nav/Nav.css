@@ -77,6 +77,7 @@
     #options-menu{
         flex-direction: column;
         background-color: var(--background_color);
+        border-radius: 0px 0px 50px 50px;
         height: 300px;
         width: 200px;
         gap: 30px;
