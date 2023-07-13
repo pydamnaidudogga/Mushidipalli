@@ -44,7 +44,7 @@ function Nav() {
                 <a href='/' >Home</a>
             </span>
             <span>
-                 <a href='df' >People</a>
+                 <a href='/people' >People</a>
             </span>
             <span>
                  <a href='sf' >Contact</a>

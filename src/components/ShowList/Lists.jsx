@@ -2,6 +2,9 @@ import './Lists.css';
 import { useMatch } from 'react-router-dom';
 
 
+// https://dogga-pydamnaidu.imgbb.com/
+
+
 function Temples() {
 
     const matchTemples = useMatch('/temples');
@@ -52,7 +55,7 @@ function Temples() {
     const SchoolsList = [
         {
             title:'Z.P.H School',
-            image:'https://lh3.googleusercontent.com/pw/AIL4fc_jJvtiJyL3zpV04xiCw0OgbKNA_O1aKOoo6tjdTnklCuRzkUCp4esX0dLBnBsJ6stkHGrsqO43SCP3LNWG2_RIdtCNlJOBz1SwBLD6Lw4tZWttVTlhakXPg0k8Z0e4LZ4u5XTX-pQr9J8Aom0_SgsYmC8z0-w989kZc7eHTEzqMEaGhJYYumMdXxKHkuoWp4sfkBGg6y_uW6irUl0y25R6cxDDi2ePn8w-suErvyfYCHgBUSoz-qh06IqZsIjCn9cjxDI1kQqC_l4HIaOJcDxWTcYk9kmQSv2V6wfLRE6U-VKmCnmcZ6QWGnCPjyDwufLJHMsWJW9AVc7-7Snckq8emNGY2DuzKKdJGfgzGhoUTKDuDU-NBP8a1zh6PlOrebBszUk711TL1KiELp93rj2tXo4b8_FRPkKFTOw6-c0PxVivTQo9yb-WaPd-V_jhSLWpWBNVw9926gED2jaMzOn6jwEqGSlKjoa_10P9qbpNAcWe1Eerp6bAseP3E1VhjdfdHWdEGvXNhTXk_fPblAfRFTBuk1kFMVSz2Ac81w5DalRVgd-h0aMGiaGtVfpHriKFjNWMv-R7xRflpsoOss6lH6qOp-74wIAuMC1OYqgzryNCiMA7Tl3wEaENFWDlnUT6kSrcr5Xlzz0cBg390GgImygWOQrvke-d-DBIqstBrY65vXmtx4rs1y2t9FpbKThOL8G50uPvJoPWmfZr_VD2n_RDSrgUmP7x6zScLvU1UAE1Vi5CSqr5ABtFLEY8C1JlAjkecyGVt83DF0s78CMPKw2sDRRsa6VNbvCEmJK7ptpjHNxm_NiU_82Qk8MB3Ur8As1cqNIRLykyP0cmvhw6c664cFOzgGAwNwFJw-rdHFB7lYilJroOyrCvq9cUTnIT9Elyv9Cy9mm7QjFSapppyCS-7qFfHv_QW57wqdy6eiB0wff66cSbrw09Wge6zCZwZE6P4EgDQHf_m0bdW7Td-pyWsw=w1712-h1284-s-no?authuser=0',
+            image:'https://i.ibb.co/98Tf34T/school.jpg',
             description:'Paradesamma Thalli is believed to be the goddess of fertility, protector of women, and a bringer of good fortune. Devotees seek her blessings for various reasons, including the fulfillment of desires, protection from evil, and the well-being of their families. She is especially revered by women seeking fertility and the birth of healthy children.',
             
         }

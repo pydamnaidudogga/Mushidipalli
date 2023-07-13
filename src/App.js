@@ -6,7 +6,9 @@ import Footer from './components/footer/Footer';
 import Home from './components/Home/Home';
 import Lists from './components/ShowList/Lists';
 import InvalidRoute from './components/InvalidRoute';
-
+import SignUp from './components/SignUp/SignUp';
+import SingIn from './components/Signin/SignIn';
+import People from './components/People/People';
 function App() {
   return (
     <div className="App">
@@ -28,6 +30,9 @@ function App() {
       <Route exact path="/ponds" element={<Lists/>} />
       <Route exact path="/schools" element={<Lists/>} />
       <Route exact path="/govtOffices" element={<Lists/>} />
+      <Route exact path="/sign_in" element={<SingIn/>} />
+      <Route exact path="/sign_up" element={<SignUp/>} />
+      <Route exact path="/people" element = {<People/>} />
 
       <Route path='*' element={<InvalidRoute/>}/>
       

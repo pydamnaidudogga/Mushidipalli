@@ -67,6 +67,9 @@
   height: 400px;
   width: 90%;
 }
+a{
+  text-decoration: none;
+}
 
 a:hover{
   background-color: var(--secondry_color);
