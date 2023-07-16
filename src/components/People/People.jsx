@@ -1,50 +1,19 @@
 import './People.css';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import {VscVerifiedFilled} from 'react-icons/vsc';
+import LoadingPage from '../LoadingPage/LoadingPage';
 
-const employeesData = [
-  { id: 1, name: 'Dogga Pydamnaidu',
-  designation:'farmer',
-  avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg'
-  },
-  { id: 2, name: 'Jane Smith',
-  designation:'farmer',
-  avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg' },
-  { id: 3, name: 'Michael Johnson',
-  designation:'farmer',
-  avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg' },
-  { id: 4, name: 'John Doe',
-  designation:'farmer',
-  avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg' },
-  { id: 5, name: 'Jane Smith' ,
-  designation:'farmer',avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg'},
-  { id: 6, name: 'Michael Johnson',
-  designation:'farmer',avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg' },
-  { id: 7, name: 'John Doe',
-  designation:'farmer',avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg' },
-  { id: 8, name: 'Jane Smith',
-  designation:'farmer', avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg' },
-  { id: 9, name: 'Michael Johnson',
-  designation:'farmer', avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg' },
-  { id: 10, name: 'John Doe',
-  designation:'farmer', avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg' },
-  { id: 11, name: 'Jane Smith',
-  designation:'farmer', avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg' },
-  { id: 12, name: 'Michael Johnson',
-  designation:'farmer', avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg' },
-  { id: 13, name: 'John Doe',
-  designation:'farmer', avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg' },
-  { id: 14, name: 'Jane Smith',
-  designation:'farmer', avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg' },
-  { id: 15, name: 'Michael Johnson',
-  designation:'farmer', avatar:'https://img.myloview.com/murals/default-avatar-profile-icon-vector-social-media-user-image-700-205124837.jpg' },
-  // Add more employee data as needed
-];
 
-const People = () => {
+
+const People = (props) => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedEmployee, setSelectedEmployee] = useState(null);
   const [listDecistion, setListDcsition] = useState(false);
-  const [isLogin,setIsLogin] = useState(false);
+  
+  const [admin,setAdmin] = useState(false);
 
   const handleSearchTermChange = (e) => {
     setSearchTerm(e.target.value);
@@ -58,17 +27,21 @@ const People = () => {
     setListDcsition(true);
     
   };
+ 
 
   const handleLogout = () => {
     // TODO: Implement logout logic here
-     console.log(setIsLogin)
+    props.userLogout();
+    navigate('/people');
+     
   };
 
-  const filteredEmployees = employeesData.filter((employee) =>
+  const filteredEmployees = props.users.filter((employee) =>
     employee.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
+    props.isLoading ? (<LoadingPage/>) :
     <div className="employee-list">
       <div className="search-section">
        
@@ -78,12 +51,12 @@ const People = () => {
           value={searchTerm}
           onChange={handleSearchTermChange}
         />
-        {isLogin ? (
+        {props.isLogin ? (
           <div className='search-nav-options' >
-          <span>
-           Profile 
+          <span  >
+           <Link to="/profile"><img style={{width:'50px',height:'50px',borderRadius:'50%'}} src={props.accountUser.image}/> </Link>
           </span>
-          <span onClick={handleLogout} >
+          <span id='logout-in-home' style={{cursor:'pointer'}} onClick={handleLogout} >
             LogOut
           </span>
 
@@ -92,11 +65,11 @@ const People = () => {
         ):(
           <div className='search-nav-options' >
           <span>
-            <a href='/sign_in' >SignIn</a>
+            <Link to='/sign_in'  >SignIn</Link>
           </span>
           <span>
             
-            <a href='/sign_up' >Signup</a>
+            <Link to='/sign_up' >Signup</Link>
           </span>
 
         </div> 
@@ -114,14 +87,19 @@ const People = () => {
         </div>
         {filteredEmployees.map((employee) => (
           <div
-            key={employee.id}
+            key={employee._id}
            
             onClick={() => handleEmployeeClick(employee)}
           >
            <span className='img-name-container' >
-            <img alt='person_image' src={employee.avatar} />
-            {employee.name}
+            <img alt='person_image' src={employee.image} />
+            <span style={{paddingLeft:'3px'}} >{employee.name}</span>
+            {employee.verified ? (
+              <span><VscVerifiedFilled/></span>
+            ): ''}
+            
            </span> 
+           
            <span>{employee.designation}</span>
           </div>
         ))}
@@ -130,18 +108,31 @@ const People = () => {
         {selectedEmployee ? (
           <div>
             <p onClick={handleListDecistion} className='profile-back-button' >Back</p>
-            <h3>Profile</h3>
-            <img alt='person_image' className='profileImage' src={selectedEmployee.avatar} />
+            <h3 style={{fontSize:'2rem',margin:'0'}}>Profile</h3>
+            <img alt='person_image' className='profileImage' src={selectedEmployee.image} />
             <p>Name: {selectedEmployee.name}</p>
-            <p>Phone: +91 9133726921</p>
-            <p>Designation: student</p>
-            <p>Gender: Male</p>
-            <p>Mushidipalli, Devarapalli, Anakapalli, Andhrapeadhesh</p>
-            <p>Mushidipalli, Devarapalli, Anakapalli, Andhrapeadhesh</p>
+            <p>Phone: +91 {selectedEmployee.contact}</p>
+            <p>Designation: {selectedEmployee.designation}</p>
+            <p>Gender: {selectedEmployee.gender}</p>
+            <p>Permanent Address: {selectedEmployee.permanentAddress}</p>
+            <p>Current Address: {selectedEmployee.currentAddress}</p>
+            {  
+
+              selectedEmployee.verified ? (<p style={{color:'green'}} >Verified</p>) : (<p style={{color:'red'}} >Not Verified</p>)
+
+            }
+            {admin ? (
+              selectedEmployee.verified ? (
+                <p>verified</p>
+              ):<button>Verify</button>
+
+            ):''}
+            
             
             {/* Add more employee details here */}
           </div>
         ) : ''}
+          
       </div>
       </div>
       

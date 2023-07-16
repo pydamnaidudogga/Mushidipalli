@@ -68,6 +68,7 @@
     .data-container{
         width: 80%;
         height: 70%;
+        min-width: 300px;
     }
     
     

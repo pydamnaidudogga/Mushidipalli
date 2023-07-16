@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Place.css';
 function Places() {
 
@@ -46,10 +47,10 @@ function Places() {
                     
                         <span key={index} className="cards"  >
                            <h3 className="card-title">{data.cardTitle}</h3>
-                           <a href={data.link} >
+                           <Link to={data.link} >
                            <img src={data.image} alt="cardphoto" className="card-image"/>
 
-                           </a>
+                           </Link>
                                    
                         </span>
 

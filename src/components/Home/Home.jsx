@@ -1,8 +1,10 @@
-
+import LoadingPage from '../LoadingPage/LoadingPage';
 import Place from '../Places/Place';
 import './Home.css'
-function Home() {
+function Home(props) {
+  const loading = props.isLoading;
     return (
+      loading?(<LoadingPage/>):
       <div className="Home">
         
         <header className="Home-header">

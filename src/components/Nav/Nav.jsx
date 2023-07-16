@@ -1,6 +1,7 @@
 import './Nav.css';
 import {HiMenu} from 'react-icons/hi' ;
 import {GrClose} from 'react-icons/gr';
+import { Link } from 'react-router-dom';
 function Nav() {
 
   function openMenu (){
@@ -30,7 +31,7 @@ function Nav() {
         
         <header className="Nav-header">
             <div id='villageName' >
-                <span> <a href='/' >MUSHIDIPALLI</a></span>
+                <span> <Link to='/' >MUSHIDIPALLI</Link></span>
             </div>
             <div id='menu-logo' onClick={()=>openMenu()} >
                 <HiMenu />
@@ -41,16 +42,16 @@ function Nav() {
                 <GrClose/>
             </span>
             <span>
-                <a href='/' >Home</a>
+                <Link to='/' >Home</Link>
             </span>
             <span>
-                 <a href='/people' >People</a>
+                 <Link to='/people' >People</Link>
             </span>
             <span>
-                 <a href='sf' >Contact</a>
+                 <Link to='sf' >Contact</Link>
             </span>
             <span>
-                 <a href='sf' >About</a>             
+                 <Link to='sf' >About</Link>             
             </span>
            
             
