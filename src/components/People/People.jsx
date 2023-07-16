@@ -69,7 +69,7 @@ const People = (props) => {
           </span>
           <span>
             
-            <Link to='/sign_up' >Signup</Link>
+            <Link to='/sign_up'  >Signup</Link>
           </span>
 
         </div> 

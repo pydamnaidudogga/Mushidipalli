@@ -84,9 +84,9 @@ const SignUp = (props) => {
           },
           body: JSON.stringify(dataa)
         });
-          await response.json();
-
-          if(response.ok){
+          const data =await response.json();
+          console.log(data);
+          if(data.message==="Signup successful"){
             toast.success('Sign_up Success', {
               position: toast.POSITION.TOP_RIGHT
               
@@ -94,7 +94,7 @@ const SignUp = (props) => {
             navigate('/sign_in');
 
           }else{
-            toast.warning('Sign_up Faild', {
+            toast.warning(data.message, {
               position: toast.POSITION.TOP_RIGHT
               
             });

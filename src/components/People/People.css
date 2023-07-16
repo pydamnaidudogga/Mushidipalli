@@ -134,7 +134,7 @@
     .search-nav-options{
         font-size: 15px;
         width: 35%;
-        
+        gap:10px;
        display: flex;
        align-items: center;
        justify-content: center;
